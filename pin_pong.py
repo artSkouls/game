@@ -4,6 +4,8 @@ import pynput
 
 ballX = 7
 ballY = 7
+ballDirX = 0.2
+ballDirY = 0.4
 width = 30
 height = 10
 
@@ -23,11 +25,9 @@ def draw():
         y += 1
 
 
-
-
-
-
 while True:
+    ballX += ballDirX
+    ballY += ballDirY
     os.system('clear')
     draw()
     time.sleep(0.1)
